@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import Pokedex from './pages/Pokedex';
+import Pokemon from './pages/Pokemon';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -23,6 +24,10 @@ export default function Routes() {
                 <Screen
                     name="Pokedex"
                     component={Pokedex}
+                />
+                <Screen
+                    name="Pokemon"
+                    component={Pokemon}
                 />
             </Navigator>
         </NavigationContainer>
