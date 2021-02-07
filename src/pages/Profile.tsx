@@ -35,6 +35,10 @@ const Profile: React.FC = () => {
           />
         </View>
       )}
+      <View style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.age}>{`${age} anos`}</Text>
+      </View>
       <View style={styles.buttonsContainer}>
         <TouchableOpacity style={styles.button}>
           <Feather name="heart" size={20} color='#c13018' />
@@ -78,6 +82,18 @@ const styles = StyleSheet.create({
     width: 200,
     resizeMode: 'contain',
     alignSelf: 'center',
+  },
+
+  name: {
+    marginLeft: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+
+  age: {
+    marginRight: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 
   buttonsContainer: {
