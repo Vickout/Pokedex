@@ -47,10 +47,10 @@ const SignUp: React.FC = () => {
             {
               alignItems: 'center',
               borderWidth: 3,
-              borderColor: '#ea3457',
+              borderColor: '#400753',
               paddingHorizontal: 4,
             }, isMaleFocus ? {
-              borderColor: '#602f75',
+              borderColor: '#fcbf10',
               borderWidth: 3,
               borderRadius: 8,
               paddingHorizontal: 4,
@@ -71,10 +71,10 @@ const SignUp: React.FC = () => {
             {
               alignItems: 'center',
               borderWidth: 3,
-              borderColor: '#ea3457',
+              borderColor: '#400753',
               paddingHorizontal: 4,
             }, isFemaleFocus ? {
-              borderColor: '#602f75',
+              borderColor: '#fcbf10',
               borderWidth: 3,
               borderRadius: 8,
               paddingHorizontal: 4,
@@ -95,7 +95,7 @@ const SignUp: React.FC = () => {
 
         <TouchableOpacity style={styles.submitButton} onPress={() => {
           handleSubmit();
-          navigation.navigate('Profile');
+          navigation.navigate('Profile', { name, age, gender });
         }}>
           <Text style={styles.submitButtonText}>Cadastrar</Text>
         </TouchableOpacity>
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'stretch',
     padding: 20,
-    backgroundColor: '#ea3457',
+    backgroundColor: '#400753',
   },
 
   logo: {
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     marginBottom: 5,
-    color: '#602f75'
+    color: '#fcbf10'
   },
 
   input: {
@@ -137,10 +137,10 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     borderRadius: 8,
     borderWidth: 2,
-    borderColor: '#602f75',
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    borderColor: '#fcbf10',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     fontSize: 15,
-    color: '#444',
+    color: '#fff',
   },
 
   genderContainer: {
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   },
 
   submitButton: {
-    backgroundColor: '#602f75',
+    backgroundColor: '#fcbf10',
     borderWidth: 0,
     borderRadius: 4,
     padding: 16,
@@ -167,6 +167,6 @@ const styles = StyleSheet.create({
   submitButtonText: {
     fontWeight: 'bold',
     color: '#fff',
-    fontSize: 15,
+    fontSize: 18,
   },
 });
